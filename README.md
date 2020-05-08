@@ -1,4 +1,6 @@
-## Requirements
+## format preserving encryption in JS
+
+##Requirements
 1. node version 14 or latest
 2. just open a node on terminal and copy paste the 'Testing' commands.
 3. make sure that fpe.js is in the same directory, whrere you performing test.
