@@ -30,13 +30,10 @@ exports.asyncTimeout = 500; // ms
 exports.process = (event) => {
     const promises = [];
     let matches;
-    let matchIdx = 1;
     ipv4Regex.lastIndex = 0; // ensure this is properly reset
     while (matches = ipv4Regex.exec(event._raw)) {
-	const midx = matchIdx;
 	const IP = matches[0];
 	promises.push(doEncryption(IP));
-	matchIdx++;
     }
     if (promises.length === 0) {
 	return event;
