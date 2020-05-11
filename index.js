@@ -8,12 +8,6 @@ const cipher = crypto({});
 const ipv4Regex = /(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)/gm;
 const cache = {};
 
-//We first match all the instances of the IPv4 regex we find in the _rawfield.
-//For each match, we add a promise to an array which we then pass to Promise.all.
-// With Promise.all, our function will wait for all DNS resolutions to complete before calling our .then()implementation then merges back in the DNS responses to the event object itself before returning it.
-// The meat of the logic for the function is in the resolvefunction we’ve implemented which wraps Node’s dns.reversein a promise:
-//const value = [`dns${midx !== 1 ? midx.toString() : ''}`, hostnames.join(' ')]; // if idx is not 1, name field dns2, dns3, etc
-
 function doEncryption(IP) {
 //module.exports.doEncryption = function(IP) {
     if (!cache[IP]) {
