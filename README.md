@@ -6,7 +6,7 @@
 3. make sure that fpe.js is in the same directory, whrere you performing test.
 
 ## Testing
-$ node
+``` $ node
 Welcome to Node.js v14.2.0.
 Type ".help" for more information.
 > const tes = require('./fpe');
@@ -25,6 +25,7 @@ undefined
 > console.log('decryption of '+node + ' is : '+node2)
 decryption of 10.335.224.222 is : 95.223.110.111
 undefined
+```
 
 
 
