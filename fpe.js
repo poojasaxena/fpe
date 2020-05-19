@@ -8,9 +8,6 @@ module.exports = function({
     iv = Buffer.alloc(16,0),
     domain = digits
 }) {
-//  if (!password) {
-//    throw new Error('`password` is required');
-//  }
 
     function enc(text) {
 	const cipher = crypto.createCipheriv(algorithm, key, iv);
