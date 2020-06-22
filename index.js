@@ -9,7 +9,7 @@ const cipher = crypto({});
 const ipv4Regex = /(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)/gm;
 const cache = {};
 
-function reverse(IP, midx) {
+function doEncryption(IP, midx) {
   if (!cache[IP]) {
     cache[IP] = {
       promise: new Promise((resolve, reject) => { // eslint-disable-line
