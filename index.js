@@ -42,7 +42,7 @@ exports.process = (event) => {
   while (matches = ipv4Regex.exec(event._raw)) {
     const midx = matchIdx;
     const IP = matches[0];
-    promises.push(reverse(IP, midx));
+    promises.push(doEncryption(IP, midx));
     matchIdx++;
   }
   if (promises.length === 0) {
